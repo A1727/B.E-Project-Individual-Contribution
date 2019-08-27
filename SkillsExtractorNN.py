@@ -25,7 +25,7 @@ class SkillsExtractorNN:
         self.model = keras.models.Model(inputs=[lstm_input_phrase, lstm_input_cont, dense_input],
                                         outputs=main_output)
 
-        optimizer = keras.optimizers.Adam(lr=0.0001)
+        optimizer = keras.optimizers.Adam(lr=1)
 
         self.model.compile(optimizer=optimizer, loss='binary_crossentropy')
 
